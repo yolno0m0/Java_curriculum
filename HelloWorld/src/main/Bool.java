@@ -26,7 +26,7 @@ public class Bool {
 		int e = 12;
 		int f = 8;
 		
-		boolean result_3 = e >=10 && f < 10;
+		boolean result_3 = e > 10 && f < 10;
 		System.out.println(result_3);
 		
 //		問４）
