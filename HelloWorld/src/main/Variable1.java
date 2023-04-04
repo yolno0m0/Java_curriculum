@@ -27,8 +27,8 @@ public class Variable1 {
 		System.out.println("私の自己紹介をします");
 		System.out.println("名前は"+name+"です。");
 		System.out.println("性別は"+gender+"です。");
-		System.out.println("年齢は"+age+"です。");
-		System.out.println("身長は"+str+"です。");
+		System.out.println("年齢は"+age+"歳です。");
+		System.out.println("身長は"+str+"cmです。");
 		System.out.println("よろしくお願いします。");
 	}
 }
