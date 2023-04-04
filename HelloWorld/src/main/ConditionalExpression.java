@@ -49,7 +49,7 @@ public class ConditionalExpression {
 		}else {
 			System.out.println("私は疲れています。");
 		}
-		System.out.println(isTired == 0 ? study+"を続けます。": "none");
+		System.out.println(isTired == 0 ? study+"を続けます。": "");
 		
 	}
 }
