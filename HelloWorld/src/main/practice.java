@@ -16,7 +16,7 @@ package main;
 public class practice {
 
 	public static void main(String[] args) {
-		for(int i=1 ; i<21 ; i+=2){
+		for(int i=3 ; i<22 ; i+=2){
 			System.out.println(i);
 		}
 			
