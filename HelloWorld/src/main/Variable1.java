@@ -16,8 +16,8 @@ public class Variable1 {
 //		よろしくお願いします。
 		String name;
 		name ="福田優海";
-		String gender;
-		gender = "女";
+		char gender;
+		gender = '女';
 		String age;
 		age = "25";
 		double height;
