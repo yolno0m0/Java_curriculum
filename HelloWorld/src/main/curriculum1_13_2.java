@@ -15,8 +15,13 @@ package main;
 public class curriculum1_13_2 {
 
 	public static void main(String[] args) {
+		//配列a
 		int [] a = {1,2,3,4,5};
+		//配列b
+		int [] b = new int[5];
+		b = a ;
 		System.out.println(a[2]);
+		System.out.println(b[2]);
 		a[3] = 10;
 		System.out.println(a[3]);
 		System.out.println("配列aの要素数は"+a.length+"です。");
