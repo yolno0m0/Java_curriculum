@@ -24,31 +24,33 @@ public class curriculum_15 {
 		String[] name = {"生徒1","生徒2","生徒3","生徒4"};
 		String [] subjects = {"国語","数学","英語"};	
 		//1:データの表示
-		for(int i = 0 ; i < test.length ; i++ ) {
-			for(int j = 0 ; j < test[0].length ; j++) {
-				
-		if(j==0) {
-			System.out.println(name[i]+":");}
-			System.out.println(subjects[j]+test[i][j]+"点");		
-			
-			}
-			System.out.println("");
-		}
+		System.out.println(name[0]+":"+subjects[0]+test[0][0]+"点、"
+							+subjects[1]+test[0][1]+"点、"
+							+subjects[2]+test[0][2]+"点");
+		
+		System.out.println(name[1]+":"+subjects[0]+test[1][0]+"点、"
+				+subjects[1]+test[1][1]+"点、"
+				+subjects[2]+test[1][2]+"点");
+		
+		System.out.println(name[2]+":"+subjects[0]+test[2][0]+"点、"
+				+subjects[1]+test[2][1]+"点、"
+				+subjects[2]+test[2][2]+"点");
+		
+		System.out.println(name[3]+":"+subjects[0]+test[3][0]+"点、"
+				+subjects[1]+test[3][1]+"点、"
+				+subjects[2]+test[3][2]+"点");
+		//br
+		System.out.println("");
+		
 		//2:平均点の算出
-		int sub1Avg = 0;
-		int sub2Avg = 0;
-		int sub3Avg = 0;
-		for(int i = 0 ; i < test.length ; i++ ) {		
-		 sub1Avg += test[i][0];		
-		 sub2Avg += test[i][1];
-		 sub3Avg += test[i][2];
-		}
-		 System.out.println("国語の平均点は"+sub1Avg/4+"点です。");
-		 System.out.println("数学の平均点は"+sub2Avg/4+"点です。");
-		 System.out.println("英語の平均点は"+sub3Avg/4+"点です。");
+		System.out.println("国語の平均点は"+(test[0][0]+test[1][0]+test[2][0]+test[3][0])/4+"点です");
+		System.out.println("数学の平均点は"+(test[0][1]+test[1][1]+test[2][1]+test[3][1])/4+"点です");
+		System.out.println("英語の平均点は"+(test[0][2]+test[1][2]+test[2][2]+test[3][2])/4+"点です");
+
+			
+		
 	}
 }
-
 
 	
 
