@@ -2,7 +2,7 @@ package curriculum1_25.c25sample;
 
 public class Sta{
 	private int status;
-//ステータスのランダム表記
+	//ステータスのランダム表記
 	public int getStatus() {
 		return this.status;
 	}

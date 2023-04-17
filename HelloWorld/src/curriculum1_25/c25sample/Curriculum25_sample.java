@@ -31,6 +31,6 @@ public class Curriculum25_sample extends Sta{
 		this.name = name;
 		System.out.println("こんにちは"+name+"さん");
 	}	
-	}
+}
 
 
