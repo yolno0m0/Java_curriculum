@@ -30,7 +30,7 @@ public class Animalmain{
 					break;
 				}
 			}
-			
+
 			//不正な値な場合の処理
 			if(!isCorrect) {
 				System.out.println("入力値が不正です。");
