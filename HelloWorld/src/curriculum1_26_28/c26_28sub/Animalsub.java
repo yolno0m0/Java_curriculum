@@ -8,7 +8,7 @@ public class Animalsub{
 
 	//速度
 	private int speed;
-
+	
 	//学名
 	private String subName;
 
