@@ -39,42 +39,44 @@
   
   */
 package curriculum1_26_28.c26_28main;
+
+import java.util.Map;
+import java.util.HashMap;
 import curriculum1_26_28.c26_28sub.Animalsub;
-public class Animalmain{
+
+public class Animalmain {
 	public static void main(String args[]) {
-		//入力値の判定
-		boolean isCorrect = false;
-		while(isCorrect == false) {
-			System.out.println("コンソールに入力してください");
-			//テキスト入力
-			String imputName = new java.util.Scanner(System.in).nextLine();
-			//Animalsub array
-			Animalsub[] animalSubArray;
-			animalSubArray = new Animalsub[6];
-			//配列のデータと入力
-			animalSubArray[0] = new Animalsub("ライオン",2.1,80,"パンデラ　レオ");
-			animalSubArray[1] = new Animalsub("ゾウ",3.2,40,"ロキソドンタ・サイクロティクス");
-			animalSubArray[2] = new Animalsub("パンダ",2.9,30,"アイルロポダ・メラノレウカ");
-			animalSubArray[3] = new Animalsub("チンパンジー",0.94,25,"パン・トゥログロディテス");
-			animalSubArray[4] = new Animalsub("シマウマ",2.4,30,"チャップマンシマウマ");
-			animalSubArray[5] = new Animalsub("インコ",0.1,50,"不明");
-			//出力
-			for(int i = 0; i < animalSubArray.length ; i++) {
 
-				if(imputName.equals(animalSubArray[i].getName())) {
-					isCorrect = true;
-					System.out.println("動物名：" + animalSubArray[i].getName());
-					System.out.println("体長：" + animalSubArray[i].getHeight() + "m");
-					System.out.println("速度：" + animalSubArray[i].getSpeed() + "km/h");
-					System.out.println("学名：" + animalSubArray[i].getSubName());
-					break;
-				}
-			}
+		System.out.println("コンソールに入力してください");
 
-			//不正な値な場合の処理
-			if(!isCorrect) {
-				System.out.println("入力値が不正です。");
-			}
+		String animalGroup = new java.util.Scanner(System.in).nextLine();
+		String[] inputAnimalGroup = animalGroup.split("[,]");
+
+		// ,で区切る配列をinputDataに入れた
+		for (int i = 0; i < inputAnimalGroup.length; i++) {
+			String[] inputData = inputAnimalGroup[i].split("[:]");
+
+			// コンストラクタの値に合わせる
+			double animalHeight = Double.parseDouble(inputData[1]);
+			int animalSpeed = Integer.parseInt(inputData[2]);
+
+			// 学名と動物名の紐付け
+			Map<String, String> subNameMap = new HashMap<>();
+			subNameMap.put("ライオン", "パンデラ レオ");
+			subNameMap.put("ゾウ", "ロキソドンタ・サイクロティクス");
+			subNameMap.put("パンダ", "アイルロポダ・メラノレウカ");
+			subNameMap.put("チンパンジー", "パン・トゥログロディテス");
+			subNameMap.put("シマウマ", "チャップマンシマウマ");
+			subNameMap.put("インコ", "不明");
+
+			// 引数に代入
+			Animalsub sub = new Animalsub(inputData[0], animalHeight, animalSpeed, subNameMap.get(inputData[0]));
+
+			// 配列を並び替えて出力
+			System.out.println("動物名：" + sub.getName());
+			System.out.println("体長：" + sub.getHeight() + "m");
+			System.out.println("速度：" + sub.getSpeed() + "km/h");
+			System.out.println("学名：" + sub.getSubName());
 		}
 	}
 }
