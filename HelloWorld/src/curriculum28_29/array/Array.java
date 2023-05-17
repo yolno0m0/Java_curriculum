@@ -7,10 +7,6 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 public class Array {
-    // List<int[]> intDate = new ArrayList<int[]>();
-    // static Scan s = new Scan();
-
-    // recordクラスを使って引数に値を入れる
     public void map(String[] inputIndex, String sortArrays) {
         Map<Integer, String> countries = new HashMap<>();
 
