@@ -5,13 +5,13 @@ public class Sub {
     // フィールドに変数名を定義
     private String prefecture;
     private String city;
-    private double area;
+    private String area;
 
     // コンストラクタを作成
-    public Sub(String prefecture, String city, double area) {
-        this.prefecture = prefecture;
-        this.city = city;
-        this.area = area;
+    public Sub(String getPrefecture, String getCity, String getArea) {
+        getPrefecture = this.prefecture;
+        getCity = this.city;
+        getArea = this.area;
     }
 
     // getterメソッド
@@ -27,7 +27,7 @@ public class Sub {
         this.city = city;
     }
 
-    public void setArea(double area) {
+    public void setArea(String area) {
         this.area = area;
     }
 
@@ -36,7 +36,8 @@ public class Sub {
     }
 
     public double getArea() {
-        return this.area;
+    	double dbArea = Double.parseDouble(this.area);
+        return dbArea;
     }
 
 }
