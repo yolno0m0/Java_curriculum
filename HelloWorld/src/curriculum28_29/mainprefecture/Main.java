@@ -5,8 +5,6 @@ import java.util.Scanner;
 import curriculum28_29.array.Array;
 
 public class Main {
-    // private static int[] intArray;
-    // private static String scanner;
     static String[] inputIndex;
 
     public static void main(String[] args) {
