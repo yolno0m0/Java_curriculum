@@ -26,7 +26,7 @@ public class Array {
         Integer[] sortedArrays = Stream.of(inputIndex).mapToInt(Integer::parseInt)
                 .boxed().toArray(Integer[]::new);
 
-        // Sortする
+        // Sort
         if (sortArrays.equals("昇順")) {
             Arrays.sort(sortedArrays);
         } else if (sortArrays.equals("降順")) {

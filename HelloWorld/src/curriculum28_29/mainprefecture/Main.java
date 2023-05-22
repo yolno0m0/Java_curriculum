@@ -21,7 +21,7 @@ public class Main {
             String scanner = sortArrays.next();
             String[] inputIndex = inputNum.nextLine().split(",");
 
-            // データの出力とソートなど格納しているメソッド
+            // データの出力とソートなど格納
             Array a = new Array();
             a.map(inputIndex, scanner);
         }
