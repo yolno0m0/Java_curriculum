@@ -1,16 +1,18 @@
 package self_introduction33.Person;
 
-class Person {
-	// lastNameの追加
+public class Person {
+	// [問題１]lastNameの追加
 	public String firstName;
 	public String lastName;
 	public int age;
 	public double height;
 	public double weight;
-	int count = 0;
+	public static int count = 0;
 
-	Person(String firstName, String lastName, int age, double height, double weight) {
-		count++;
+	// [問題２]コンストラクタにlastNameを追加
+	public Person(String firstName, String lastName, int age, double height, double weight) {
+		// [問題３] Person.count++とlastNameを追加
+		Person.count++;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
@@ -35,7 +37,7 @@ class Person {
 
 	}
 
-	public void printCount() {
-		System.out.println("合計" + count + "人です");
+	public static void printCount() {
+		System.out.println("合計" + Person.count + "人です");
 	}
 }
